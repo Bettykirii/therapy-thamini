@@ -35,7 +35,7 @@ public class HibernateHelper {
 
 
 
-        configuration.addAnnotatedClass(Counsellors.class);
+       // configuration.addAnnotatedClass(Counsellors.class);
         configuration.addAnnotatedClass(Clients.class);
 
 

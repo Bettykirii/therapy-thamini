@@ -9,32 +9,35 @@ import java.util.List;
 public class HibernateSave {
 
     public static void main(String args []) {
-        insertWithSaveMethod();
+        insertWithSaveorUpdateMethod();
 
 
     }
 
 
-public static void insertWithSaveMethod(){
+public static void insertWithSaveorUpdateMethod(){
         Session session = HibernateHelper.getSessionFactory().getCurrentSession();
 
         Transaction tx = session.getTransaction();
         tx.begin();
 
         Clients clients = new Clients();
-        clients.setName("Jane Doe");
-        clients.setClientNeed("jane.doe@nodomain.com");
+        clients.setFirstName("Jane ");
+        clients.setLastName("Doe");
+        clients.setUsername("Jdoe");
+        clients.setPassword("janeydoe");
 
-       session.save(clients);
+
+       session.saveOrUpdate(clients);
 
 
-
-    Counsellors counsellors = new Counsellors();
-        counsellors.setName("");
-        counsellors.setAreaOfExpertise("");
-        counsellors.setQualifications("");
-
-        session.save(counsellors);
+//
+//    Counsellors counsellors = new Counsellors();
+//        counsellors.setName("");
+//        counsellors.setAreaOfExpertise("");
+//        counsellors.setQualifications("");
+//
+//        session.save(counsellors);
 
 
         tx.commit();
