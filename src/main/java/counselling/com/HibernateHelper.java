@@ -23,7 +23,7 @@ public class HibernateHelper {
 
         Properties properties = new Properties();
         properties.setProperty(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-        properties.setProperty(Environment.URL, "jdbc:mysql://localhost:3306/db_counselling?useSSL=false");
+        properties.setProperty(Environment.URL, "jdbc:mysql://localhost:3306/db_counselling?useSSL=false&serverTimezone=UTC");
         properties.setProperty(Environment.USER, "root");
         properties.setProperty(Environment.PASS, "");
         properties.setProperty(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
@@ -36,7 +36,7 @@ public class HibernateHelper {
 
 
         configuration.addAnnotatedClass(Counsellors.class);
-        configuration.addAnnotatedClass(Client.class);
+        configuration.addAnnotatedClass(Clients.class);
 
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

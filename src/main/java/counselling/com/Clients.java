@@ -7,27 +7,14 @@ import javax.persistence.*;
 public class Clients extends BaseEntity {
 
 
+    @Column
+    private String ClientNeed;
 
-    @Column(qualifications = "counsellor_qualifications", columnDefinition = "LONGTEXT")
-    private String qualifications;
-
-    @Column(AreaOfExpertise = "counsellor_Expertise", columnDefinition = "LONGTEXT")
-    private String AreaOfExpertise;
-
-
-    public String getQualifications() {
-        return qualifications;
+    public String getClientNeed() {
+        return ClientNeed;
     }
 
-    public void setQualifications(String qualifications) {
-        this.qualifications = qualifications;
-    }
-
-    public String getAreaOfExpertise() {
-        return AreaOfExpertise;
-    }
-
-    public void setAreaOfExpertise(String areaOfExpertise) {
-        AreaOfExpertise = areaOfExpertise;
+    public void setClientNeed(String clientNeed) {
+        ClientNeed = clientNeed;
     }
 }

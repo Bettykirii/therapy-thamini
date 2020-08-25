@@ -1,41 +1,33 @@
-package tracom.hibernate.example;
+package counselling.com;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "counsellors")
-public class Counsellors {
-
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class Counsellors extends BaseEntity {
 
     @Column
-    private String name;
+    private String qualifications;
 
-    @Column(name = "notes", columnDefinition = "LONGTEXT")
-    private String description;
+    @Column
+    private String AreaOfExpertise;
 
-    public int getId() {
-        return id;
+
+    public String getQualifications() {
+        return qualifications;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setQualifications(String qualifications) {
+        this.qualifications = qualifications;
     }
 
-    public String getName() {
-        return name;
+    public String getAreaOfExpertise() {
+        return AreaOfExpertise;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAreaOfExpertise(String areaOfExpertise) {
+        AreaOfExpertise = areaOfExpertise;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
