@@ -3,3 +3,4 @@ counselling\com\HibernateSave.class
 counselling\com\BaseEntity.class
 counselling\com\Clients.class
 counselling\com\ClientController.class
+counselling\com\LoginController.class
