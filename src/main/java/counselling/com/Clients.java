@@ -1,21 +1,35 @@
 package counselling.com;
 
+import org.hibernate.Session;
+
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 @Entity
 @Table(name = "clients")
-public class Clients extends BaseEntity {
+public class Clients  {
+
+
+
+//    @OneToOne(mappedBy = "session")
+//  private Session session;
 
 
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Column(name = "first_name")
     private String firstName;
@@ -54,6 +68,6 @@ public class Clients extends BaseEntity {
         this.password = password;
     }
 
-    public void saveClients(Clients clients) {
-    }
+
+
 }

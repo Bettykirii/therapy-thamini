@@ -8,39 +8,30 @@ import java.util.List;
 
 public class HibernateSave {
 
-    public static void main(String args []) {
-        insertWithSaveorUpdateMethod();
 
 
+    public static void saveClients(Clients clients) {
+        Transaction transaction = null;
+        try (Session session = HibernateHelper.getSessionFactory().openSession()) {
+            // start a transaction
+            transaction = session.beginTransaction();
+            // save the student object
+            session.save(clients);
+            // commit transaction
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+
+        }
     }
 
 
-public static void insertWithSaveorUpdateMethod(){
-        Session session = HibernateHelper.getSessionFactory().getCurrentSession();
-
-        Transaction tx = session.getTransaction();
-        tx.begin();
-
-        Clients clients = new Clients();
-        clients.setFirstName("Jane ");
-        clients.setLastName("Doe");
-        clients.setUsername("Jdoe");
-        clients.setPassword("janeydoe");
 
 
-       session.saveOrUpdate(clients);
 
 
-//
-//    Counsellors counsellors = new Counsellors();
-//        counsellors.setName("");
-//        counsellors.setAreaOfExpertise("");
-//        counsellors.setQualifications("");
-//
-//        session.save(counsellors);
-
-
-        tx.commit();
-
-    }
 }
+

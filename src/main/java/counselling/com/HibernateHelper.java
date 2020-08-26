@@ -1,6 +1,6 @@
 package counselling.com;
 
-import com.mysql.cj.xdevapi.Client;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -33,9 +33,6 @@ public class HibernateHelper {
 
         configuration.setProperties(properties);
 
-
-
-       // configuration.addAnnotatedClass(Counsellors.class);
         configuration.addAnnotatedClass(Clients.class);
 
 

@@ -1,10 +1,16 @@
 //package counselling.com;
 //
 //import javax.persistence.*;
+//import java.util.ArrayList;
+//import java.util.List;
 //
 //@Entity
 //@Table(name = "counsellors")
 //public class Counsellors extends BaseEntity {
+//
+//   @OneToMany(mappedBy = "clients")
+//   private List<Clients> clients = new ArrayList<Clients>();
+//
 //
 //    @Column
 //    private String qualifications;

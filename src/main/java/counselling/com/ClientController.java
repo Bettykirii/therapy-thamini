@@ -17,10 +17,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/register")
 public class ClientController extends HttpServlet {
-    private Clients userDao;
+    private HibernateSave userDao;
 
     public void init() {
-        userDao = new Clients();
+        userDao = new HibernateSave();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
