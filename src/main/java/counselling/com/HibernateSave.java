@@ -4,7 +4,7 @@ package counselling.com;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import java.util.List;
+
 
 public class HibernateSave {
 

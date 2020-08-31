@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/register")
 public class ClientController extends HttpServlet {
+    private static final long serialVersionUID = 1L;
     private HibernateSave userDao;
 
     public void init() {
