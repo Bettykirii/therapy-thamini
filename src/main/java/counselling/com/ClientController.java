@@ -47,7 +47,7 @@ public class ClientController extends HttpServlet {
 
         userDao.saveClients(clients);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("register-success.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("home.html");
         dispatcher.forward(request, response);
     }
 }

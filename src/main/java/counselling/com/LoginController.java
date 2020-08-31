@@ -45,7 +45,7 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
 
         if (loginDao.validate(username, password)) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("login-success.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("home.html");
             dispatcher.forward(request, response);
         } else {
             throw new Exception("Login not successful..");
