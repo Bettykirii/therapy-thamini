@@ -32,22 +32,22 @@ public class HibernateSave {
 
         Transaction transaction = null;
         Clients user = null;
-        try (Session session = HibernateHelper.getSessionFactory().openSession()) {
+        try (Session sessions = HibernateHelper.getSessionFactory().openSession()) {
             // start a transaction
-            transaction = session.beginTransaction();
+           // transaction = sessions.beginTransaction();
             // get an user object
-            user = (Clients) session.createQuery("FROM User U WHERE U.username = :userName").setParameter("userName", userName)
+            user = (Clients) sessions.createQuery("FROM Clients U WHERE U.username = :userName").setParameter("userName", userName)
                     .uniqueResult();
 
             if (user != null && user.getPassword().equals(password)) {
                 return true;
             }
             // commit transaction
-            transaction.commit();
+            //transaction.commit();
         } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
+            // if (transaction != null) {
+            //     transaction.rollback();
+            // }
             e.printStackTrace();
         }
         return false;
