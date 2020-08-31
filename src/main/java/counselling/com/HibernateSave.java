@@ -30,7 +30,7 @@ public class HibernateSave {
 
     public boolean validate(String userName, String password) {
 
-        Transaction transaction = null;
+        //Transaction transaction = null;
         Clients user = null;
         try (Session sessions = HibernateHelper.getSessionFactory().openSession()) {
             // start a transaction
