@@ -1,7 +1,9 @@
 counselling\com\HibernateHelper.class
 counselling\com\HibernateSave.class
 counselling\com\Clients.class
+counselling\FormController.class
 counselling\com\BaseEntity.class
 counselling\com\ClientController.class
+counselling\com\Counsellors.class
 counselling\com\LogoutController.class
 counselling\com\LoginController.class

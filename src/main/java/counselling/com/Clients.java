@@ -11,10 +11,10 @@ import javax.persistence.*;
 @Table(name = "clients")
 public class Clients  {
 
+@ManyToOne
+private Clients clients;
 
 
-//    @OneToOne(mappedBy = "session")
-//  private Session session;
 
 
 

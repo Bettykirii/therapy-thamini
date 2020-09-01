@@ -6,8 +6,9 @@
   <display-name>Archetype Created Web Application</display-name>
   <welcome-file-list>
     <welcome-file>register.jsp</welcome-file>
-    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>loginclient.jsp</welcome-file>
     <welcome-file>home.jsp</welcome-file>
-    <welcome-file>logout.jsp</welcome-file>
+    
+    
   </welcome-file-list>
 </web-app>
