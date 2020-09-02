@@ -50,3 +50,39 @@ body {
   max-width:100%;
   height:auto;
 }
+#branding {
+  margin: 8% 0 0 0;
+  display: block;
+  text-align: center;
+}
+
+#branding img {
+  display: block;
+  min-width: 70px;
+  width: 6.5%;
+  height: auto;
+  margin: 0 auto 5%;
+}
+
+#branding h1 {
+    font: normal 200 350%/1 'Syncopate';
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 4%;
+}
+
+#branding hr {
+    width: 20%;
+    height: 4px;
+    border: none;
+    background-color: rgba(255,255,255,0.3);
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#branding h2 {
+  color: #fff;
+  font-size: 95%;
+  margin-top: 5%;
+}

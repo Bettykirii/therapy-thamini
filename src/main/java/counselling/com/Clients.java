@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Table(name = "clients")
 public class Clients  {
 
-@ManyToOne
-private Clients clients;
+//    @ManyToOne
+//    private Clients clients;
 
 
 
@@ -43,6 +43,9 @@ private Clients clients;
     @Column(name = "password")
     private String password;
 
+
+
+
     public String getFirstName() {
         return firstName;
     }
@@ -67,7 +70,6 @@ private Clients clients;
     public void setPassword(String password) {
         this.password = password;
     }
-
 
 
 }

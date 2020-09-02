@@ -40,11 +40,16 @@ public class ClientController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
+
         Clients clients = new Clients();
         clients.setFirstName(firstName);
         clients.setLastName(lastName);
         clients.setUsername(username);
         clients.setPassword(password);
+
+
+
+
 
         userDao.saveClients(clients);
 

@@ -21,9 +21,19 @@
      name="username" required>
    </div>
    <div class="form-group">
-    <label for="uname">Password:</label> <input type="password"
+    <label for="uname">Password:</label>
+     <input type="password"
      class="form-control" id="password" placeholder="Password"
      name="password" required>
+     </div>
+
+      <div class="form-group">
+     <label for="User">User</label>
+    <select id="user" name="user">
+      <option value="australia">Clients</option>
+      <option value="counselors.html">Counselors</option>
+        name="user" required>
+    </select>
    </div>
    <button type="submit" class="btn btn-primary">Submit</button>
   </form>

@@ -1,39 +1,78 @@
 package counselling.com;
 
+import org.hibernate.Session;
+
+import java.io.Serializable;
+
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
-@Table(name = "counsellors")
-public class Counsellors extends BaseEntity {
+@Table(name = "counselors")
+public class Counsellors  {
 
-  @OneToMany(mappedBy = "clients")
-  private List<Clients> clients = new ArrayList<Clients>();
-
-
-   @Column
-   private String qualifications;
-
-   @Column
-   private String AreaOfExpertise;
+//    @ManyToOne
+//    private Clients clients;
 
 
-   public String getQualifications() {
-       return qualifications;
-   }
-
-   public void setQualifications(String qualifications) {
-       this.qualifications = qualifications;
-   }
-
-   public String getAreaOfExpertise() {
-       return AreaOfExpertise;
-   }
-
-   public void setAreaOfExpertise(String areaOfExpertise) {
-       AreaOfExpertise = areaOfExpertise;
-   }
 
 
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Column(name = "first_Name")
+    private String first_name;
+
+    @Column(name = "last_Name")
+    private String last_name;
+
+    @Column(name = "user_name")
+    private String user_name;
+
+    @Column(name = "password")
+    private String password;
+
+
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

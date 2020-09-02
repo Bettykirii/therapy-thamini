@@ -8,6 +8,8 @@
     <welcome-file>register.jsp</welcome-file>
     <welcome-file>loginclient.jsp</welcome-file>
     <welcome-file>home.jsp</welcome-file>
+    <welcome-file>registercounselors.jsp</welcome-file>
+    
     
   </welcome-file-list>
 </web-app>

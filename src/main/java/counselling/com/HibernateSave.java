@@ -8,15 +8,13 @@ import org.hibernate.Transaction;
 
 public class HibernateSave {
 
-
-
-    public static void saveClients(Clients clients) {
+public static void saveCounsellors(Counsellors counsellors) {
         Transaction transaction = null;
-        try (Session session = HibernateHelper.getSessionFactory().openSession()) {
+        try (Session session2 = HibernateHelper.getSessionFactory().openSession()) {
             // start a transaction
-            transaction = session.beginTransaction();
+            transaction = session2.beginTransaction();
             // save the student object
-            session.save(clients);
+            session2.save(counsellors);
             // commit transaction
             transaction.commit();
         } catch (Exception e) {
@@ -27,6 +25,23 @@ public class HibernateSave {
 
         }
     }
+     public static void saveClients(Clients clients) {
+         Transaction transaction = null;
+         try (Session session = HibernateHelper.getSessionFactory().openSession()) {
+             // start a transaction
+             transaction = session.beginTransaction();
+             // save the student object
+             session.save(clients);
+             // commit transaction
+             transaction.commit();
+         } catch (Exception e) {
+             if (transaction != null) {
+                 transaction.rollback();
+             }
+             e.printStackTrace();
+
+         }
+     }
 
     public boolean validate(String userName, String password) {
 
@@ -42,6 +57,7 @@ public class HibernateSave {
             if (user != null && user.getPassword().equals(password)) {
                 return true;
             }
+
             // commit transaction
             //transaction.commit();
         } catch (Exception e) {
