@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Table(name = "counselors")
 public class Counsellors  {
 
-//    @ManyToOne
-//    private Clients clients;
+    @ManyToOne
+    private Clients clients;
 
 
 
