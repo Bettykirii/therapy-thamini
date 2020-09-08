@@ -16,6 +16,91 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-inverse  navbar-fixed-top"  role="navigation" >
+
+                 <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a   href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li><a href="aboutus.html">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="contactus.html#">Main Courses</a></li>
+                            <li><a href="contactus.html#">Bootstrap</a></li>
+                            <li><a href="contactus.html#">Asp</a></li>
+                            <li><a href="contactus.html#">SQl</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">PHP</li>
+                            <li><a href="contactus.html#">MySQl</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="fa fa-envelope-o"></span> Contact</a></li>
+
+
+
+                </ul>
+               <ul class="nav navbar-nav navbar-right">
+                   <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+   </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"> &times;</button>
+                <h4>Login</h4>
+            </div>
+            <div class="modal-body">
+                   <form class="form-inline">
+                   <div class="form-group">
+                       <label class="sr-only" for="email">Email</label><input type="text" class="form-control input-sm" placeholder="Email" id="email" name="email">
+                       </div>
+                        <div class="form-group">
+
+                           <label class="sr-only" for="password">Password</label>
+                                     <input type="password" class="form-control input-sm" placeholder="Password" id="password" name="password"></div>
+                       <div class="checkbox">
+                       <label>
+                       <input type="checkbox"> Remember me
+                       </label>
+                         </div>
+
+
+
+                       <button type="submit" class="btn btn-info btn-xs">Sign in</button>
+                       <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cancel</button>
+
+
+
+
+                    </form>
+            </div>
+<!--
+            <div class="modal-footer">
+                <div style="padding:10px"></div>
+            </div>
+-->
+        </div>
+        </div>
+    </div>
 
 <div class="container">
   <div class="split left">
@@ -33,7 +118,7 @@
         </div>
         <div ng-app ng-init="checked = false">
            <div class="form-signin">
-           <form action="<%=request.getContextPath()%>/register" method="post" >
+           <form action="<%=request.getContextPath()%>/regi" method="post" >
             <label for="fname">First Name</label>
             <input class="form-styling" type="text" name="username" placeholder=""/>
             <label for="password">Password</label>
@@ -46,12 +131,12 @@
           </form>
           </div>
           </div>
-        <form action="<%=request.getContextPath()%>/register" method="post">
+        <form action="<%=request.getContextPath()%>/registercounselors" method="post">
          <div class="form-signup">
 
-           <label for="fname">First Name:</label> <input type="text" class="form-styling" id="fname" placeholder="First Name" name="firstName" required>
-            <label for="lname">Last Name:</label> <input type="text" class="form-styling" id="lname" placeholder="last Name" name="lastName" required>
-            <label for="username">User Name:</label> <input type="text" class="form-styling" id="username" placeholder="User Name" name="username" required>
+           <label for="fname">First Name:</label> <input type="text" class="form-styling" id="fname" placeholder="First Name" name="first_name" required>
+            <label for="lname">Last Name:</label> <input type="text" class="form-styling" id="lname" placeholder="last Name" name="last_name" required>
+            <label for="username">User Name:</label> <input type="text" class="form-styling" id="username" placeholder="User Name" name="user_name" required>
             <label for="password">Password:</label> <input type="password" class="form-styling" id="password" placeholder="Password" name="password" required>
 
             <a ng-click="checked = !checked" class="btn-signup">Sign Up</a>

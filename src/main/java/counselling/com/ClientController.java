@@ -26,6 +26,8 @@ public class ClientController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("==================================");
+
         register(request, response);
     }
 
@@ -39,7 +41,6 @@ public class ClientController extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
 
         Clients clients = new Clients();
         clients.setFirstName(firstName);

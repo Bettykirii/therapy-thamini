@@ -1,12 +1,22 @@
-//package counselling.com;
-//
-//import javax.persistence.Entity;
-//import javax.persistence.OneToOne;
-//import javax.persistence.Table;
-//
-//@Entity
-//@Table(name = "sessions")
-//public class Session extends BaseEntity {
-//
-//
-//}
+
+import java.io.*;
+import java.util.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+@WebServlet("/test_session")
+public class Session extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+    public Session() {
+        super();
+    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        HttpSession session = request.getSession();
+
+        PrintWriter writer = response.getWriter();
+        writer.println("Session ID: " + session.getId());
+        writer.println("Creation Time: " + new Date(session.getCreationTime()));
+        writer. println("Last Accessed Time: " + new Date(session.getLastAccessedTime()));
+    }
+}

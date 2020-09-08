@@ -32,7 +32,7 @@ public class CounsellorsController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("registercounselors.jsp");
+        response.sendRedirect("register.jsp");
     }
 
     private void registercounselors(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
