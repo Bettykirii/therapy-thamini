@@ -33,7 +33,7 @@ public class ClientController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("register.jsp");
+        response.sendRedirect("login.html");
     }
 
     private void register(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

@@ -1,6 +1,5 @@
 counselling\com\HibernateHelper.class
 counselling\com\HibernateSave.class
-Session.class
 counselling\com\Clients.class
 counselling\com\CounsellorsController.class
 counselling\com\FormController.class
