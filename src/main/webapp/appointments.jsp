@@ -1,38 +1,23 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Output page: Fetching the value from session</title>
-</head>
-<body>
-<%
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
 
-String name=(String)session.getAttribute("sessname");
-out.print("Hello User: You have entered the name: "+name );
-
-String fname=(String)session.getAttribute("sessnam");
-out.print("Hello User: You have entered the name: "+fname );
-
-String lname=(String)session.getAttribute("sessna");
-out.print("Hello User: You have entered the name: "+lname );
+            String name = request.getParameter("uname");
+            String email=request.getParameter("email");
+            out.print("Welcome " + name+ " Email :"+email);
 
 
-%>
-<h1>Retrieve data from database in jsp</h1>
-<table border="1">
-<tr>
-<td>first name</td>
-<td>last name</td>
-<td>City name</td>
-<td>Email</td>
-
-</tr>
-
-<tr>
-<td><%String name=(String)session.getAttribute("sessname") %></td>
-<td><%String name=(String)session.getAttribute("sessname") %></td>
-<td><%String name=(String)session.getAttribute("sessname") %></td>
-<td><%String name=(String)session.getAttribute("sessname") %></td>
-</tr>
+            session.setAttribute("user", name);      //set attribute in session
+            session.setAttribute("email", email);
 
 
-</body>
+        %>
+        <a href = "session_second.jsp">Next Page</a>
+    </body>
 </html>

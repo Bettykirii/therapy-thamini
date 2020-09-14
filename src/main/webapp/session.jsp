@@ -1,25 +1,19 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Passing the input value to a session variable</title>
-</head>
-<body>
-<%
-String uname=request.getParameter("fname");
-out.print("Welcome "+ uname);
-session.setAttribute("sessname",uname);<br/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <pre>
+        <form action="appointments.jsp">
+            Name  : <input type="text" name="uname">
 
-String lname=request.getParameter("lname");
-out.print("Welcome "+ lname);
-session.setAttribute("sessnam",lname);<br/>
+            Email : <input type="text" name="email">
 
-String email=request.getParameter("email");
-out.print("Welcome "+ email);
-session.setAttribute("sessna",email);
-
-
-%>
-
-
-<a href="output.jsp">Check Output Page Here </a>
+                    <input type="submit" value="Click"><br/>
+        </pre>
+    </form>
 </body>
 </html>
