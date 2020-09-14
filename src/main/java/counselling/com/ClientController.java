@@ -1,5 +1,7 @@
 package counselling.com;
 
+import models.Clients;
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -26,14 +28,14 @@ public class ClientController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("==================================");
+
 
         register(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("login.html");
+        response.sendRedirect("register.html");
     }
 
     private void register(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -41,16 +43,14 @@ public class ClientController extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String email = request.getParameter("email");
 
         Clients clients = new Clients();
         clients.setFirstName(firstName);
         clients.setLastName(lastName);
         clients.setUsername(username);
         clients.setPassword(password);
-
-
-
-
+        clients.setEmail(email);
 
         userDao.saveClients(clients);
 

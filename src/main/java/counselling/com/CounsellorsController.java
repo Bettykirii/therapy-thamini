@@ -1,5 +1,7 @@
 package counselling.com;
 
+import models.Counsellors;
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;

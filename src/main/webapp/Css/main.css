@@ -758,16 +758,7 @@ h1{
 	}
 
 }
-.main-form {
-  flex-direction: column;
-  width: 900px;
-  height: 600px;
-  align-self: center;
-  justify-self: center;
-  border: 20px solid transparent;
-  border-image: url("https://images.unsplash.com/photo-1507908708918-778587c9e563?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
-  border-image-slice: 70;
-}
+
 
 .inputs {
   display: flex;

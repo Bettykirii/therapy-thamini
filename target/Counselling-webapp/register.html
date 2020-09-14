@@ -1,35 +1,204 @@
 
-        <!DOCTYPE html>
-        <html>
-        <head>
-        <meta charset="ISO-8859-1">
-        <title>Registration Form</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Css/main.css">
 
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-          <link rel="stylesheet" href="Css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                crossorigin="anonymous">
-           <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        </head>
-        <body>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
+    <style>
+                /*Start Global Style*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#e9ebee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    font-family: sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  height:80%
+}
+
+.signUp ,.register{width: 50%}
+
+/*Start Login Style*/
+.signUp{
+    float:left;
+    background-color: #fafafa;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    padding-top: 100px;
+}
+.signUp h1{
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+input[type="email"] , input[type="password"],[type="fname"] , input[type="lname"],[type="username"]  {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #eeeeef;
+}
+
+.signUp span{
+    float: left
+}
+.signUp a{
+    float: right;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all ease-in-out;
+}
+.signUp a:hover{color: #9526a9;font-weight: bold}
+.signUp button{
+    width: 100%;
+    margin: 30px 0;
+    padding: 10px;
+    border: none;
+    background-color: #9526a9;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.signUp button:hover{
+    width:97%;
+    font-size: 22px;
+    border-radius: 5px;
+
+}
+.signUp hr{
+    width: 30%;
+    display: inline-block
+}
+
+.signUp p{
+    display: inline-block;
+    margin: 0px 10px 30px;
+}
+.signUp ul{
+    list-style: none;
+    margin-bottom:40px;
+}
+.signUp ul li{
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.signUp ul li:hover{opacity: 0.6}
+.signUp ul li:last-child{margin-right: 0}
+.signUp .copyright{
+    display: inline-block;
+    float: none;
+}
+/*Start Register Style*/
+.register{
+    float: right;
+    background-image: linear-gradient(135deg, #23212f 5%, #9526a9 95%);
+    height: 100%;
+    color:#fff;
+    border-radius:  0 10px 10px  0;
+    text-align: center;
+    padding: 100px 0;
+}
+.register h2{
+    margin: 30px 0;
+    font-size: 50px;
+    letter-spacing: 3px
+}
+.register p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.register button{
+    background-color: transparent;
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition:0.2s all  ease-in-out;
+}
+.register button:hover{
+    color: #9526a9;
+    background-color: #fff;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav2.html");
+});
+</script>
+
+<div class="container">
+    <div class="signUp">
         <div class="container">
-            <div class="main-form">
-                <div class="inputs">
-                    <h1 class="header">Sign in </h1>
-                    <input type="text" class="username" placeholder="username">
-                    <input type="password" class="password" placeholder="password">
-                    <button class="btn">Sign in</button>
-                </div>
-            </div>
+            <form name="loginForm" method="post" action="register">
+                <input type="email" placeholder="Email"  name="email" required><br>
+            <input type="fname" placeholder="FirstName"  name="firstName" required><br>
+            <input type="lname" placeholder="LastName"    name="lastName" required><br>
+            <input type="username" placeholder="UserName"   name="username" required><br>
+
+            <input type="password" placeholder="Password"  name="password" required><br>
+            <button onclick="window.location.href='login.html';">sign up</button>
+            <hr><p>Or Connect With</p><hr>
+            </form>
+            <ul>
+                <li><i class="fab fa-facebook-f fa-2x"></i></li>
+                <li><i class="fab fa-twitter fa-2x"></i></li>
+                <li><i class="fab fa-github fa-2x"></i></li>
+                <li><i class="fab fa-linkedin-in fa-2x"></i></li>
+            </ul>
+            <div class="clearfix"></div>
+            <span class="copyright">&copy;2019</span>
         </div>
+    </div>
+    <div class="register">
+        <div class="container">
+            <i class="fas fa-user-plus fa-5x"></i>
+            <h2>Hello,friend!</h2>
+            <p>Already have an account?</p>
+            <button onclick="window.location.href='login.html';">Login in here <i class="fas fa-arrow-circle-right"></i></button>
+        </div>
+    </div>
 
 
+</div>
+</div>
 
-        </body>
-        </html>
+
+</body>
+</html>

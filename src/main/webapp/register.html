@@ -57,17 +57,14 @@ body{
     font-size: 2.5em;
 }
 
-input[type="email"] , input[type="password"]{
+input[type="email"] , input[type="password"],[type="fname"] , input[type="lname"],[type="username"]  {
     width: 100%;
     padding: 10px;
     margin-bottom: 30px;
     border: none;
     background-color: #eeeeef;
 }
-input[type="checkbox"]{
-    float: left;
-    margin-right: 5px;
-}
+
 .signUp span{
     float: left
 }
@@ -153,7 +150,7 @@ input[type="checkbox"]{
     background-color: #fff;
     cursor: pointer;
 }
-            </style>
+</style>
 </head>
 <body>
 <div id="nav-placeholder">
@@ -162,22 +159,23 @@ input[type="checkbox"]{
 
 <script>
 $(function(){
-  $("#nav-placeholder").load("nav.html");
+  $("#nav-placeholder").load("nav2.html");
 });
 </script>
 
 <div class="container">
     <div class="signUp">
         <div class="container">
-            <h1>SignUp</h1>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="FirstName"><br>
-            <input type="email" placeholder="LastName">
-            <input type="email" placeholder="UserName">
+            <form name="loginForm" method="post" action="register">
+                <input type="email" placeholder="Email"  name="email" required><br>
+            <input type="fname" placeholder="FirstName"  name="firstName" required><br>
+            <input type="lname" placeholder="LastName"    name="lastName" required><br>
+            <input type="username" placeholder="UserName"   name="username" required><br>
 
-            <input type="password" placeholder="Password"><br>
-            <button>sign up</button>
+            <input type="password" placeholder="Password"  name="password" required><br>
+            <button onclick="window.location.href='login.html';">sign up</button>
             <hr><p>Or Connect With</p><hr>
+            </form>
             <ul>
                 <li><i class="fab fa-facebook-f fa-2x"></i></li>
                 <li><i class="fab fa-twitter fa-2x"></i></li>
@@ -192,21 +190,15 @@ $(function(){
         <div class="container">
             <i class="fas fa-user-plus fa-5x"></i>
             <h2>Hello,friend!</h2>
-            <p>Enter your personal details and start journey with us</p>
-            <button>Register <i class="fas fa-arrow-circle-right"></i></button>
+            <p>Already have an account?</p>
+            <button onclick="window.location.href='login.html';">Login in here <i class="fas fa-arrow-circle-right"></i></button>
         </div>
     </div>
 
 
 </div>
-<div id="footer-placeholder">
-
 </div>
-<script>
 
-$(function(){
-  $("#footer-placeholder").load("footer.html");
-});
-</script>
+
 </body>
 </html>

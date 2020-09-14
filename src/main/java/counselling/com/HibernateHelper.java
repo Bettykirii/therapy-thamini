@@ -1,6 +1,8 @@
 package counselling.com;
 
 
+import models.Clients;
+import models.Counsellors;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -23,7 +25,7 @@ public class HibernateHelper {
 
         Properties properties = new Properties();
         properties.setProperty(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-        properties.setProperty(Environment.URL, "jdbc:mysql://localhost:3306/db_counselling?useSSL=false&serverTimezone=UTC");
+        properties.setProperty(Environment.URL, "jdbc:mysql://localhost:3306/db_counselling?useSSL=false&serverTimezone=UTC&autoReconnect=true&failOverReadOnly=false&maxReconnects=100");
         properties.setProperty(Environment.USER, "root");
         properties.setProperty(Environment.PASS, "");
         properties.setProperty(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
@@ -33,7 +35,7 @@ public class HibernateHelper {
 
         configuration.setProperties(properties);
 
-        configuration.addAnnotatedClass(Counsellors.class);
+       // configuration.addAnnotatedClass(Counsellors.class);
         configuration.addAnnotatedClass(Clients.class);
 
 

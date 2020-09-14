@@ -1,6 +1,8 @@
 
 package counselling.com;
 
+import models.Clients;
+import models.Counsellors;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
