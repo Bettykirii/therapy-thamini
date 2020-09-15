@@ -8,9 +8,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "counselors")
 public class Counsellors  {
-
-    @ManyToOne
-    private Clients clients;
+//
+//    @ManyToOne
+//    private Clients clients;
 
 
 
@@ -40,6 +40,9 @@ public class Counsellors  {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "specialization")
+    private String specialization;
 
 
     public String getFirst_name() {
@@ -72,5 +75,13 @@ public class Counsellors  {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
 }

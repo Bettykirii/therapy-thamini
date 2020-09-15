@@ -1,11 +1,11 @@
 counselling\com\HibernateHelper.class
 counselling\com\HibernateSave.class
+Controllers\ClientController.class
+Controllers\CounsellorsController.class
+Controllers\LogoutController.class
+counselling\com\DisplayCounsellors.class
 models\Counsellors.class
-counselling\com\CounsellorsController.class
 models\BaseEntity.class
-counselling\com\FormController.class
 counselling\com\DisplayClients.class
-counselling\com\ClientController.class
-counselling\com\LogoutController.class
+Controllers\LoginController.class
 models\Clients.class
-counselling\com\LoginController.class

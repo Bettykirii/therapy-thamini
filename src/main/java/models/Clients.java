@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "clients")
-public class Clients extends BaseEntity {
+public class Clients {
 
 //    @ManyToOne
 //    private Clients clients;
