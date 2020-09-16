@@ -1,11 +1,13 @@
-counselling\com\HibernateHelper.class
 counselling\com\HibernateSave.class
-Controllers\ClientController.class
-Controllers\CounsellorsController.class
-Controllers\LogoutController.class
 counselling\com\DisplayCounsellors.class
 models\Counsellors.class
 models\BaseEntity.class
 counselling\com\DisplayClients.class
 Controllers\LoginController.class
+counselling\com\HibernateHelper.class
+Controllers\ClientController.class
+Controllers\CounsellorsController.class
+Controllers\LogoutController.class
+models\Appointments.class
+counselling\com\DisplayAppointments.class
 models\Clients.class

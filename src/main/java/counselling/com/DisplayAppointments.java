@@ -17,7 +17,7 @@ public class DisplayAppointments extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Session session = HibernateHelper.getSessionFactory().openSession();
-        List<models.Clients> clients = session.createQuery("FROM appointments a").getResultList();
+        List<models.Clients> clients = session.createQuery("FROM Appointments a").getResultList();
         ObjectMapper objectMapper = new ObjectMapper();
         try{
             String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(clients);

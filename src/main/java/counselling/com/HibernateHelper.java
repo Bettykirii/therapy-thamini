@@ -1,6 +1,7 @@
 package counselling.com;
 
 
+import models.Appointments;
 import models.Clients;
 import models.Counsellors;
 import org.hibernate.SessionFactory;
@@ -35,8 +36,9 @@ public class HibernateHelper {
 
         configuration.setProperties(properties);
 
-       configuration.addAnnotatedClass(Counsellors.class);
+        configuration.addAnnotatedClass(Counsellors.class);
         configuration.addAnnotatedClass(Clients.class);
+        configuration.addAnnotatedClass(Appointments.class);
 
 
 

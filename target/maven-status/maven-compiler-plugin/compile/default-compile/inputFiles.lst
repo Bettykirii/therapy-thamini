@@ -2,10 +2,12 @@ C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\counselling\com\H
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\models\Clients.java
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\models\Counsellors.java
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\models\BaseEntity.java
-C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\Controllers\CounsellorsController.java
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\counselling\com\HibernateSave.java
-C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\counselling\com\DisplayCounsellors.java
-C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\Controllers\LoginController.java
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\counselling\com\DisplayClients.java
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\Controllers\ClientController.java
+C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\Controllers\CounsellorsController.java
+C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\counselling\com\DisplayCounsellors.java
+C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\Controllers\LoginController.java
+C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\models\Appointments.java
 C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\Controllers\LogoutController.java
+C:\Users\bkirii\Desktop\therapy2\therapy-thamini\src\main\java\counselling\com\DisplayAppointments.java

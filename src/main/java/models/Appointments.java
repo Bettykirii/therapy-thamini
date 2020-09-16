@@ -7,7 +7,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 
-@Entity
+@Embeddable
 @Table(name = "appointments")
 public class Appointments {
 
