@@ -19,12 +19,12 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <style>
-.mySlides {display:none;}
+.mySlides {display:none;};
+
 .responsive {
   width: 100%;
   height: auto;
 }
-
 </style>
 </head>
 
@@ -50,28 +50,31 @@ $(function(){
 <div style="background-color:#F3CAEE;height:200px;text-align:center" >
 <h2>Thamini Counselling</h2>
     <br>
-    <h3>Courage Works</h3>
+    <h3 style="	font: normal 36px 'Cookie', cursive;
+">Courage Works <br>
+    Thamini Online Counselling</h3>
+
 </div>
 
 <Section class="img-slider" >
     <div class="slider-container">
 
         <div class="slide">
-            <img src="https://cdn.pixabay.com/photo/2016/11/22/22/10/dark-1850852_960_720.jpg" class="responsive" width="600" height="400" >
+            <img src="https://cdn.pixabay.com/photo/2016/11/22/22/10/dark-1850852_960_720.jpg" class="responsive" style="height:600px">
             <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
                 Is it too dark in there?
             </div>
         </div>
 
         <div class="slide">
-            <img src="https://wallpaperaccess.com/full/1363953.jpg" class="responsive" width="600" height="400">
+            <img src="https://wallpaperaccess.com/full/1363953.jpg" class="responsive" style="height:600px" >
             <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
             Lets help you get a little light
             </div>
         </div>
 
         <div class="slide">
-            <img src="https://cdn.hipwallpaper.com/i/26/50/hKMHR9.jpg" class="responsive" width="600" height="400">
+            <img src="https://cdn.hipwallpaper.com/i/26/50/hKMHR9.jpg" class="responsive" style="height:600px">
             <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
                 The light isn't so far ahead
             </div>
@@ -88,33 +91,6 @@ $(function(){
 $(function(){
   $("#footer-placeholder").load("footer.html");
 });
-</script>
-<script>
-
- let menuIcon = document.querySelector('.menuIcon');
-
-
-        menuIcon.addEventListener('click', () => {
-            if (nav.style.transform != 'translateX(0%)') {
-                nav.style.transform = 'translateX(0%)';
-                nav.style.transition = 'transform 0.2s ease-out';
-            } else {
-                nav.style.transform = 'translateX(-100%)';
-                nav.style.transition = 'transform 0.2s ease-out';
-            }
-        });
-
-
-        // Toggle Menu Icon ========================================
-        let toggleIcon = document.querySelector('.menuIcon');
-
-        toggleIcon.addEventListener('click', () => {
-            if (toggleIcon.className != 'menuIcon toggle') {
-                toggleIcon.className += ' toggle';
-            } else {
-                toggleIcon.className = 'menuIcon';
-            }
-        });
 </script>
 
 </body>

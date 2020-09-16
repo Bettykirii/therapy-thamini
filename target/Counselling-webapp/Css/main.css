@@ -582,13 +582,12 @@ h1{
  }
 
 .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: red;
-   color: black;
-   text-align: center;
+     position:fixed;
+      bottom:0;
+      left:0;
+      right:0;
+      width:100%;
+      height:auto;
 }
 .footer-distributed{
 	background-color: #2c292f;

@@ -9,22 +9,13 @@ pageEncoding="ISO-8859-1"%>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-  <div data-role="page">
-    <div data-role="header">
-      <a href="login.html" data-rel="back">Back</a>
-      <h1>App Title</h1>
-    </div>
-  </div>
+ <form>
+          <button type="submit" formaction="login.html">Click me</button>
+       </form>
 <% session.invalidate(); %>
 <p>You have been successfully logout</p>
-<button onclick="goBack()">Go Back</button>
 
-<p>Notice that clicking on the Back button here will not result in any action, because there is no previous URL in the history list.</p>
 
-<script>
-function goBack() {
-  window.history.back();
-}
-</script>
+
 </body>
 </html>

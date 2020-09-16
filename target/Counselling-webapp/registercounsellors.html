@@ -31,14 +31,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height:180vh;
     font-family: sans-serif;
 }
 .container{
     width: 80%;
     margin: auto;
     padding: 20px;
-  height:80%
+    height:80%
 }
 
 .signUp ,.register{width: 50%}
@@ -168,11 +168,12 @@ $(function(){
         <div class="container">
             <form name="loginForm" method="post" action="registercounselors">
                 <input type="email" placeholder="Email"  name="email" required><br>
-                <input type="fname" placeholder="FirstName"  name="firstName" required><br>
-                <input type="lname" placeholder="LastName"    name="lastName" required><br>
-                <input type="username" placeholder="UserName"   name="username" required><br>
+                <input type="fname" placeholder="FirstName"  name="first_Name" required><br>
+                <input type="lname" placeholder="LastName"    name="last_Name" required><br>
+                <input type="username" placeholder="UserName"   name="user_name" required><br>
+                <input type="username" placeholder="Gender"   name="Gender" required><br>
 
-                <input list="browsers" name="specialization" id="browser">
+                <input list="browsers" placeholder="specialization" name="specialization" id="browser">
                 <datalist id="browsers">
                     <option value="Marriage">
                     <option value="Alcohol">
@@ -183,13 +184,13 @@ $(function(){
 
                 <input type="password" placeholder="Password"  name="password" required><br>
                 <button onclick="window.location.href='login.html';">sign up</button>
-                <hr><p>Or Connect With</p><hr>
+                <hr><p style="color:white">Or Connect With</p><hr>
             </form>
-            <ul>
-                <li><i class="fab fa-facebook-f fa-2x"></i></li>
-                <li><i class="fab fa-twitter fa-2x"></i></li>
-                <li><i class="fab fa-github fa-2x"></i></li>
-                <li><i class="fab fa-linkedin-in fa-2x"></i></li>
+            <ul style="color:white">
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-github "></i></li>
+                <li><i class="fa fa-linkedin-in"></i></li>
             </ul>
             <div class="clearfix"></div>
             <span class="copyright">&copy;2019</span>
@@ -200,7 +201,7 @@ $(function(){
             <i class="fas fa-user-plus fa-5x"></i>
             <h2>Hello,friend!</h2>
             <p>Already have an account?</p>
-            <button onclick="window.location.href='login.html';">Login in here <i class="fas fa-arrow-circle-right"></i></button>
+            <button onclick="window.location.href='login.html';">Login in here <i class="fa fa-arrow-circle-right"></i></button>
         </div>
     </div>
 

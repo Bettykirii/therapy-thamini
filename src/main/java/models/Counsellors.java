@@ -44,6 +44,14 @@ public class Counsellors  {
     @Column(name = "specialization")
     private String specialization;
 
+    @Column(name = "Gender")
+    private String gender;
+
+    @Column(name = "Email")
+    private String email;
+
+
+
 
     public String getFirst_name() {
         return first_name;
@@ -83,5 +91,21 @@ public class Counsellors  {
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

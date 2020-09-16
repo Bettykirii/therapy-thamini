@@ -51,7 +51,9 @@ $(function(){
 <h2>Thamini Counselling</h2>
     <br>
     <h3 style="	font: normal 36px 'Cookie', cursive;
-">Courage Works</h3>
+">Courage Works <br>
+    Thamini Online Counselling</h3>
+
 </div>
 
 <Section class="img-slider" >
@@ -89,33 +91,6 @@ $(function(){
 $(function(){
   $("#footer-placeholder").load("footer.html");
 });
-</script>
-<script>
-
- let menuIcon = document.querySelector('.menuIcon');
-
-
-        menuIcon.addEventListener('click', () => {
-            if (nav.style.transform != 'translateX(0%)') {
-                nav.style.transform = 'translateX(0%)';
-                nav.style.transition = 'transform 0.2s ease-out';
-            } else {
-                nav.style.transform = 'translateX(-100%)';
-                nav.style.transition = 'transform 0.2s ease-out';
-            }
-        });
-
-
-        // Toggle Menu Icon ========================================
-        let toggleIcon = document.querySelector('.menuIcon');
-
-        toggleIcon.addEventListener('click', () => {
-            if (toggleIcon.className != 'menuIcon toggle') {
-                toggleIcon.className += ' toggle';
-            } else {
-                toggleIcon.className = 'menuIcon';
-            }
-        });
 </script>
 
 </body>

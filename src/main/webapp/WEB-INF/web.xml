@@ -8,8 +8,10 @@
     <welcome-file>register.html</welcome-file>
     <welcome-file>home.html</welcome-file>
     <welcome-file>login.html</welcome-file>
+    <welcome-file>index2.jsp</welcome-file>
 
-    
-    
+
+
+
   </welcome-file-list>
 </web-app>

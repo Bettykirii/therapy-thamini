@@ -17,7 +17,7 @@ public class DisplayCounsellors extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Session session = HibernateHelper.getSessionFactory().openSession();
-        List<models.Clients> clients = session.createQuery("FROM counsellors p").getResultList();
+        List<models.Clients> clients = session.createQuery("FROM Counsellors p").getResultList();
         ObjectMapper objectMapper = new ObjectMapper();
         try{
             String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(clients);
